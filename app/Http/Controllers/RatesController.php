@@ -42,7 +42,7 @@ class RatesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Rate  $rate
      * @return \Illuminate\Http\Response
      */
     public function show(Rate $rate)
@@ -53,24 +53,27 @@ class RatesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Rate  $rate
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Rate $rate)
     {
-        return view('rates.update');
+        return view('rates.update', compact('rate'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Rate  $rate
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Rate $rate)
     {
-        //
+        //ToDo: validate (ex. $request->validate())
+        $rate->update($request->all());
+
+        return redirect(route('rates.show', $rate));
     }
 
     /**
