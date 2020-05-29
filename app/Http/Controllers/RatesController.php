@@ -36,7 +36,9 @@ class RatesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //ToDo: Validations
+        $rate = Rate::create($request->all());
+        return redirect(route('rates.index'));
     }
 
     /**
