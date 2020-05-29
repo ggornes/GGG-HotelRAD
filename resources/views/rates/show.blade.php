@@ -35,12 +35,16 @@
 
 
             <div class="d-flex flex-row justify-content-center">
-                <a href="{{route('rates.edit', $rate)}}" class="btn btn-outline-warning mr-3">Edit</a>
-                <a href="{{route('rates.destroy', $rate)}}" class="btn btn-outline-danger mr-3">Delete</a>
+                <a href="{{route('rates.edit', $rate)}}" class="btn btn-outline-warning mr-4">Edit</a>
+                <a href="{{route('rates.destroy', $rate)}}" class="btn btn-outline-danger mr-4">Delete</a>
             </div>
 
-            <div class="d-flex justify-content-center _browse-all-btn mt-5">
-                <a href="{{route('rates.index')}}" class="btn btn-lg btn-outline-primary">Browse rates</a>
+            <hr>
+
+            <div class="d-flex justify-content-center mt-4">
+                <a class="text-info h4" href="{{route('rates.index')}}">
+                    Browse rates
+                </a>
             </div>
     </div>
 @endsection

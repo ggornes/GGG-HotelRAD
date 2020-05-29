@@ -47,10 +47,13 @@
             </div>
         </form>
 
-        <div class="d-flex justify-content-center mt-5">
-            <a class="text-info h5" href="{{route('rates.index')}}">
-                Browse all rates
+        <hr>
+
+        <div class="d-flex justify-content-center mt-4">
+            <a class="text-info h4" href="{{route('rates.index')}}">
+                Browse rates
             </a>
         </div>
+
     </div>
 @endsection
