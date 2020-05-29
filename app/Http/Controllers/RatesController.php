@@ -45,9 +45,9 @@ class RatesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Rate $rate)
     {
-        return view('rates.show');
+        return view('rates.show', compact('rate'));
     }
 
     /**
