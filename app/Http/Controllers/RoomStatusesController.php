@@ -27,6 +27,7 @@ class RoomStatusesController extends Controller
     public function create()
     {
         //
+        return view('room_statuses.create');
     }
 
     /**
@@ -37,7 +38,9 @@ class RoomStatusesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //ToDo: Validations
+        $roomStatus = RoomStatus::create($request->all());
+        return view('room_statuses.show', compact($roomStatus));
     }
 
     /**
