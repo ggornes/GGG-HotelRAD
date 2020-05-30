@@ -38,7 +38,9 @@ class RatesController extends Controller
     {
         //ToDo: Validations
         $rate = Rate::create($request->all());
-        return redirect(route('rates.index'));
+        
+        //return redirect(route('rates.index'));
+        return view('rates.show', compact('rate'));
     }
 
     /**
