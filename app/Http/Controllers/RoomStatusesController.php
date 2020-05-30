@@ -46,12 +46,14 @@ class RoomStatusesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  RoomStatus  $roomStatus
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(RoomStatus $roomStatus)
     {
         //
+        return view('room_statuses.show', compact('roomStatus'));
+
     }
 
     /**

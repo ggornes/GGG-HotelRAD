@@ -27,7 +27,7 @@
                 @foreach($roomStatuses as $rs)
                     <tr>
                         <th class="text-center">{{$rs->id}}</th>
-                        <td class="text-center">{{$rs->subject}}</td>
+                        <td class="text-center">{{$rs->name}}</td>
                         <td class="text-center">{{$rs->description}}</td>
                         <td class="text-center">{{$rs->created_at}}</td>
                         <td class="text-center">{{$rs->updated_at ? $rs->updated_at : ''}}</td>
