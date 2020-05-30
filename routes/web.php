@@ -24,10 +24,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Notes: https://laravel.com/docs/5.2/controllers#restful-supplementing-resource-controllers
 // https://stackoverflow.com/questions/28714675/laravel-5-route-not-defined-while-it-is
 Route::get('/rates/{rate}/delete', ['as' => 'rates.delete', 'uses' => 'RatesController@delete']);
+Route::get('/feedbackSubjects/{feedbackSubject}/delete', ['as' => 'feedbackSubjects.delete', 'uses' => 'FeedbackSubjectsController@delete']);
+Route::get('/roomStatuses/{roomStatus}/delete', ['as' => 'roomStatuses.delete', 'uses' => 'RoomStatusesController@delete']);
 
 Route::resource('/rates', 'RatesController');
-
-
-Route::get('/feedbackSubjects/{feedbackSubject}/delete', ['as' => 'feedbackSubjects.delete', 'uses' => 'FeedbackSubjectsController@delete']);
-
 Route::resource('/feedbackSubjects', 'FeedbackSubjectsController');
+Route::resource('/roomStatuses', 'RoomStatusesController');
