@@ -43,6 +43,14 @@
         @endif
 
 
+        <!-- if rates array is empty -->
+        @if (count($feedbackSubjects) <= 0)
+            <div class="alert alert-dark text-center" role="alert">
+                Sorry, no feedback available.
+            </div>
+        @endif
+
+
 
     </div>
 @endsection

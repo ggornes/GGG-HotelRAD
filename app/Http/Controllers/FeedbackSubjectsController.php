@@ -43,12 +43,13 @@ class FeedbackSubjectsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  FeedbackSubject  $feedbackSubject
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(FeedbackSubject $feedbackSubject)
     {
         //
+        return view('feedback_subjects.show', compact('feedbackSubject'));
     }
 
     /**
