@@ -40,7 +40,7 @@ class RoomStatusesController extends Controller
     {
         //ToDo: Validations
         $roomStatus = RoomStatus::create($request->all());
-        return view('room_statuses.show', compact($roomStatus));
+        return view('room_statuses.show', compact('roomStatus'));
     }
 
     /**
@@ -89,6 +89,28 @@ class RoomStatusesController extends Controller
      */
     public function destroy(RoomStatus $roomStatus)
     {
-        //
+        try
+        {
+            $roomStatus->delete();
+        }
+        catch (\Exception $e)
+        {
+
+        }
+        finally
+        {
+            return redirect(route('roomStatuses.index'));
+        }
+    }
+
+    /**
+     * Show Delete view for the resource
+     *
+     * @param  RoomStatus  $roomStatus
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function delete(RoomStatus $roomStatus)
+    {
+        return view('room_statuses.delete', compact('roomStatus'));
     }
 }
