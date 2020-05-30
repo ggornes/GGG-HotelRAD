@@ -36,7 +36,7 @@
 
             <div class="d-flex flex-row justify-content-center">
                 <a href="{{route('rates.edit', $rate)}}" class="btn btn-outline-warning mr-4">Edit</a>
-                <a href="{{route('rates.destroy', $rate)}}" class="btn btn-outline-danger mr-4">Delete</a>
+                <a href="{{route('rates.delete', $rate)}}" class="btn btn-outline-danger mr-4">Delete</a>
             </div>
 
             <hr>

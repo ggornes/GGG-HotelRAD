@@ -34,7 +34,7 @@
                         <td>
                             <a href="{{route('rates.show', $rate)}}" class="btn btn-outline-info mr-4">View</a>
                             <a href="{{route('rates.edit', $rate)}}" class="btn btn-outline-warning mr-4">Edit</a>
-                            <a href="{{route('rates.destroy', $rate)}}" class="btn btn-outline-danger mr-4">Delete</a>
+                            <a href="{{route('rates.delete', $rate)}}" class="btn btn-outline-danger mr-4">Delete</a>
                         </td>
                     </tr>
                 @endforeach

@@ -81,11 +81,32 @@ class RatesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Rate  $rate
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Rate $rate)
     {
-        return view('rates.delete');
+        try
+        {
+            $rate->delete();
+        }
+        catch (\Exception $e)
+        {
+        }
+        finally {
+            return redirect(route('rates.index'));
+        }
+
+    }
+
+    /**
+     * Delete the resource
+     *
+     * @param  Rate  $rate
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function delete(Rate $rate)
+    {
+        return view('rates.delete', compact('rate'));
     }
 }
