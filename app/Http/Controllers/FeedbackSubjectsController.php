@@ -27,6 +27,7 @@ class FeedbackSubjectsController extends Controller
     public function create()
     {
         //
+        return view('feedback_subjects.create');
     }
 
     /**
@@ -38,6 +39,10 @@ class FeedbackSubjectsController extends Controller
     public function store(Request $request)
     {
         //
+        //ToDo: Validations
+        $feedbackSubject = FeedbackSubject::create($request->all());
+
+        return view('feedback_subjects.show', compact('feedbackSubject'));
     }
 
     /**
