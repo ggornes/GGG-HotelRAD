@@ -43,7 +43,7 @@
 
         <div class="d-flex justify-content-center mt-4">
             <a class="text-info h4" href="{{route('roomStatuses.index')}}">
-                Browse feedback
+                Browse room statuses
             </a>
         </div>
     </div>

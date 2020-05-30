@@ -59,33 +59,35 @@ class RoomStatusesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  RoomStatus  $roomStatus
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(RoomStatus $roomStatus)
     {
-        //
+        return view('room_statuses.update', compact('roomStatus'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  roomStatus  $roomStatus
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, RoomStatus $roomStatus)
     {
-        //
+        //ToDo: Validate
+        $roomStatus->update($request->all());
+        return redirect(route('roomStatuses.show', $roomStatus));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Roomstatus  $roomStatus
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(RoomStatus $roomStatus)
     {
         //
     }
