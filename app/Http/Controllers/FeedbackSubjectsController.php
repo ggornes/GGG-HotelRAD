@@ -55,24 +55,28 @@ class FeedbackSubjectsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  FeedbackSubject  $feedbackSubject
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(FeedbackSubject $feedbackSubject)
     {
         //
+        return view('feedback_subjects.update', compact('feedbackSubject'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  FeedbackSubject  $feedbackSubject
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, FeedbackSubject $feedbackSubject)
     {
-        //
+        //ToDo: validate (ex. $request->validate())
+        $feedbackSubject->update($request->all());
+
+        return redirect(route('feedbackSubjects.show', $feedbackSubject));
     }
 
     /**
