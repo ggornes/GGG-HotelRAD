@@ -87,11 +87,36 @@ class FeedbackSubjectsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  FeedbackSubject  $feedbackSubject
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(FeedbackSubject $feedbackSubject)
     {
         //
+        try
+        {
+            $feedbackSubject->delete();
+        }
+        catch (\Exception $e)
+        {
+
+        }
+        finally
+        {
+            return redirect(route('feedbackSubjects.index'));
+        }
+
+    }
+
+
+    /**
+     * Show Delete view for the resource
+     *
+     * @param  FeedbackSubject  $feedbackSubject
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function delete(FeedbackSubject $feedbackSubject)
+    {
+        return view('feedback_subjects.delete', compact('feedbackSubject'));
     }
 }
