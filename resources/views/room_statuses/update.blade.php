@@ -7,7 +7,7 @@
         <p>This page will edit/update a room status.</p>
 
         <form action="{{route('roomStatuses.update', $roomStatus)}}" method="POST">
-            @method('PUT');
+            @method('PUT')
             @csrf
 
             <div class="form-group row">
@@ -50,7 +50,7 @@
 
         <div class="d-flex justify-content-center mt-4">
             <a class="text-info h4" href="{{route('feedbackSubjects.index')}}">
-                Browse feedback
+                Browse room status
             </a>
         </div>
 

@@ -35,8 +35,8 @@
 
 
         <div class="d-flex flex-row justify-content-center">
-            <a href="{{route('feedbackSubjects.edit', $roomStatus)}}" class="btn btn-outline-warning mr-4">Edit</a>
-            <a href="{{route('feedbackSubjects.delete', $roomStatus)}}" class="btn btn-outline-danger mr-4">Delete</a>
+            <a href="{{route('roomStatuses.edit', $roomStatus)}}" class="btn btn-outline-warning mr-4">Edit</a>
+            <a href="{{route('roomStatuses.delete', $roomStatus)}}" class="btn btn-outline-danger mr-4">Delete</a>
         </div>
 
         <hr>
