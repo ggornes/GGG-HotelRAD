@@ -32,7 +32,7 @@
             </tbody>
         </table>
 
-        <h5 class="mb-3">Do you want to delete the rate?</h5>
+        <h5 class="mb-3">Do you want to delete this room status?</h5>
 
         <form action="{{route('roomStatuses.destroy', $roomStatus)}}" method="POST">
             @method('DELETE')
