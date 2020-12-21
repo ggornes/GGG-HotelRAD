@@ -44,7 +44,6 @@ Now run `composer install` to install the application dependencies:
 docker-compose exec app composer install
 ```
 
-The last thing to do before testing the application 
 The next thing to do is to generate a unique application key with the `artisan` Laravel command-line tool. This key is used to encrypt user sessions and other sensitive data:
 ```
 docker-compose exec app php artisan key:generate
@@ -67,3 +66,9 @@ http://localhost:8000/rates
 http://localhost:8000/roomStatuses
 http://localhost:8000/feedbackSubjects
 ```
+
+## Screenshots
+![Home](https://i.imgur.com/nVKaGIO.png)
+![Rates](https://i.imgur.com/vxKcUlQ.png)
+![RoomStatus](https://i.imgur.com/yjQeonJ.png)
+![Feedback](https://i.imgur.com/hi8RFC7.png)
