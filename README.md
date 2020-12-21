@@ -10,7 +10,7 @@ It includes all BREAD (Browse, Read, Edit, Add, Delete) actions and views for:
 
 ## Setup instructions
 
-Make sure you have installed PHP (7.4+), MariaDB (10.4+) and composer before proceeding.
+Make sure you have installed Docker before proceeding.
 
 ### 1. Clone the repository
 
